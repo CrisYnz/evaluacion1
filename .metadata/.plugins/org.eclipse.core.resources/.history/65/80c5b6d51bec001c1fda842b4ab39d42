@@ -1,0 +1,8 @@
+package com.generation.repositories;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UsuarioRepository {
+/* las interface solo definen los metodos, no los implementamos*/
+}

@@ -1,0 +1,21 @@
+package com.generation.services;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Service;
+
+import com.generation.models.Usuario;
+/*Logica de negocios o validaciones del sistema*/
+/*Llamar al respository*/	
+
+@Service
+public class UsuarioService {
+
+	public void saveUsuario(@Valid Usuario usuario) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+	
+}

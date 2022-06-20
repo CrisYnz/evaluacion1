@@ -1,0 +1,24 @@
+package com.generation.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.generation.services.AutoService;
+
+@Controller
+@RequestMapping("/auto")
+public class AutoController {
+	
+	//inyeccion de dependencias
+	
+	@Autowired
+	AutoService autoService;
+	
+	//Pasamos un objeto vacio
+	@RequestMapping("")
+	public String auto(@ModelAttribute("auto")) {
+		return "auto.jsp";
+	}
+}

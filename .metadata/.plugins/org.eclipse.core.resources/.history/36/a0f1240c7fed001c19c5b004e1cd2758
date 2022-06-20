@@ -1,0 +1,14 @@
+package com.generation.services;
+
+import javax.validation.Valid;
+
+import com.generation.models.Auto;
+
+public class AutoService {
+
+	public void saveAuto(@Valid Auto auto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

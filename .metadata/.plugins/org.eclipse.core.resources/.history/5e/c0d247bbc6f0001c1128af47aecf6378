@@ -1,0 +1,15 @@
+package com.generation.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.generation.services.ElefanteService;
+
+@Controller
+@RequestMapping("/elefante")
+public class ElefanteController {
+	
+	@Autowired
+	ElefanteService elefanteService;
+}

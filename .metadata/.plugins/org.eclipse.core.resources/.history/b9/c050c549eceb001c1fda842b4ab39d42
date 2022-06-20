@@ -1,0 +1,20 @@
+package com.generation.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/registro")
+public class RegistroController {
+	//ruta para desplegar el jsp en registro
+	@RequestMapping("")
+	public String registro() {
+		return "registro.jsp";//pagina a desplegar
+	}
+	//ruta para registro usuario
+	@RequestMapping("")
+	public String registro() {
+		return "registro.jsp";//pagina a desplegar
+	}
+	
+}

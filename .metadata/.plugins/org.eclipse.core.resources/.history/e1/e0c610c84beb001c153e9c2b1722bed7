@@ -1,0 +1,5 @@
+package com.generation.models;
+
+public class Usuario {
+
+}

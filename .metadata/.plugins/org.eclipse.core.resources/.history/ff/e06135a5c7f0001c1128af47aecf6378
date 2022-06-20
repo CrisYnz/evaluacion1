@@ -1,0 +1,50 @@
+package com.generation.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.generation.models.Auto;
+import com.generation.models.Elefante;
+import com.generation.services.ElefanteService;
+
+@Controller
+@RequestMapping("/elefante")
+public class ElefanteController {
+	
+	@Autowired
+	ElefanteService elefanteService;
+	
+	// Pasamos un objeto vacio
+		@RequestMapping("")
+		public String auto(@ModelAttribute("elefante") Elefante elefante) {
+			return "elefante.jsp";
+		}
+		@PostMapping("/guardar")
+		public String guardarElefante(@ModelAttribute("elefante") Elefante elefante, BindingResult resultado, Model model) {
+			// capturamos si existe un ingreso de error en los datos
+			if (resultado.hasErrors()) {
+				model.addAttribute("msgError", "Debe realizar el ingreso de datos");
+				return "elefante.jsp";
+			} else {
+				// capturamos el objeto auto con atributos llenos
+				System.out.println(elefante.toString());
+
+				// enviar el objeto al service
+				autoService.saveAuto(auto);
+				// obtener una lista de autos
+				List<Auto> listaAutos = autoService.findAll();
+				// pasamos la lista de autos al jsp
+				model.addAttribute("autosCapturados", listaAutos);
+				return "mostrarAutos.jsp";// pagina a desplegar
+
+			}
+
+		}	
+}

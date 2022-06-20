@@ -1,0 +1,3 @@
+server.port=9080
+#cambia el puerto default 8080 por otro, en este caso 9080
+spring.mvc.view.prefix =
